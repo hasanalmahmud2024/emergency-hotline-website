@@ -65,25 +65,34 @@ document.body.addEventListener('click', function (event) {
         console.log('call btn clicked');
 
         const parentContainer = event.target.parentElement.parentElement;
-        console.log(parentContainer);
 
         const hotlineTitle = parentContainer.querySelector(".hotline-title").innerText;
-        console.log(hotlineTitle);
+        const callNumber = parentContainer.querySelector("h1").innerText;
+        
         // history
         const historyCard = document.getElementById("history-card");
-
         
-      const coins = parseInt(document.getElementById("coins").innerText);
+        
+        const coins = parseInt(document.getElementById("coins").innerText);
         if (coins) {
-              alert(`Call `)
-              const updatedCoin = coins - 10;
-              document.getElementById("coins").innerText = updatedCoin;
-            console.log("updated coins", updatedCoin);
+          alert(`Call ${hotlineTitle} \n ${callNumber} `);
+          const updatedCoin = coins - 20;
+          document.getElementById("coins").innerText = updatedCoin;
+          console.log("updated coins", updatedCoin);
 
+            const callHistory = document.createElement("div");
+            const headline = document.createElement('p');
+            callHistory.appendChild(headline);
+            console.log(callHistory);
+
+            historyCard.appendChild(callHistory);
             
 
+            headline.innerText = `${hotlineTitle} \n ${callNumber}`
             
-          } else {
+                // bg-gray-200 min-h-15 rounded-xl
+            
+        } else if (coins < 20) {
               alert("You do not have enough coins to make a call.")
           }
     }
