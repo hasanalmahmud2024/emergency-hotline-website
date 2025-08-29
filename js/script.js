@@ -8,6 +8,15 @@ document.body.addEventListener("click", function (event) {
     const newCopyNumber = copyNumber + 1;
 
     document.getElementById("copy-number").innerText = newCopyNumber;
+    // Copy to clipboard
+    navigator.clipboard
+      .writeText(callNumber)
+      .then(() => {
+        console.log(`Copied to clipboard: ${callNumber}`);
+      })
+      .catch((err) => {
+        console.error("Failed to copy:", err);
+      });
   }
 
   // love icon
