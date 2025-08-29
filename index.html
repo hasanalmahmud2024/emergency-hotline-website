@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency Service Hotline</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <body>
+    <!-- nav  -->
+    <div class=" mx-auto flex justify-between items-center px-5 my-3">
+        <div class="flex items-center justify-center gap-2">
+            <img class="h-16" src="./assets/logo.png" alt="">
+            <h1 class="font-extrabold text-2xl text-green-900">Emergency <br> Service</h1>
+        </div>
+
+        <div class="flex justify-center items-center gap-3 font-bold">
+            <div class="bg-green-50 px-3 py-2 rounded-3xl flex  items-center justify-center gap-2 ">
+              <p id="heart-count">0</p>
+              <img class="h-7" src="./assets/heart.png" alt="">
+            </div>
+            <div class="bg-green-50 px-3 py-2 rounded-3xl flex items-center justify-center gap-2">
+              <p id="coins">100</p>
+              <img class="h-7" src="./assets/coin.png" alt="">
+            </div>
+            <div class="bg-green-600 p-2 text-white rounded-3xl px-5 ">
+              <p><span id="copy-number">0</span> Copy</p>
+            </div>
+        </div>
+    </div>
+    <!-- banner section -->
+    <div class=" bg-green-900  text-white grid justify-center gap-1 py-10">
+      <img class="h-30 mx-auto" src="./assets/logo-dark.png" alt="">
+      <h1 class="font-extrabold text-2xl mx-auto">Emergency Service Directory</h1>
+      <p class="mx-auto text-sm">Government Emergency Services at Your Fingertip - A Project by  Government of the People's Republic of Bangladesh</p>
+    </div>
+    <!-- card section -->
+    <div class=" bg-green-100 min-h-50 pt-9 grid grid-cols-4  gap-4 p-5">
+      <!-- card 01-->
+      <div class="bg-white rounded-2xl p-4">
+        <div class="flex justify-between pt-2">
+        <div class="bg-red-200 rounded-sm  p-2 ">
+          <img class="h-6" src="./assets/emergency.png" alt="">
+        </div>
+        <i class="heart-icon fa-regular fa-heart text-2xl"></i>
+        </div>
+        <h3 class="font-bold text-xl">Fire</h3>
+                <p class="hotline-title text-xs">Fire service</p>
+
+        <h1 class="font-extrabold mt-2 text-2xl">999</h1>
+        <div class="bg-gray-300 rounded-2xl w-fit px-3 py-0.5">
+          <p class="text-xs">Fire Service Hotline</p>
+        </div>
+        <div class="flex items-center justify-center gap-2 mt-3">
+          <button class="copy-btn btn w-32 rounded-2xl"><i class="fa-solid fa-copy"></i>Copy</button>
+          <button class="call-button btn bg-green-600 w-32 rounded-2xl text-white"><i class="fa-solid fa-phone"></i>Call</button>
+        </div>
+      </div>
+      <!-- card 02 -->
+      <div class="bg-white rounded-2xl p-4">
+        <div class="flex justify-between pt-2">
+        <div class="bg-red-200 rounded-sm  p-2 ">
+          <img class="h-6" src="./assets/emergency.png" alt="">
+        </div>
+        <i class="heart-icon fa-regular fa-heart text-2xl"></i>
+        </div>
+        <h3 class="font-bold text-xl">Fire</h3>
+        <p class="hotline-title text-xs">Fire service</p>
+
+        <h1 class="font-extrabold mt-2 text-2xl">999</h1>
+        <div class="bg-gray-300 rounded-2xl w-fit px-3 py-0.5">
+          <p class="text-xs">Fire Service Hotline</p>
+        </div>
+        <div class="flex items-center justify-center gap-2 mt-3">
+          <button class="copy-btn btn w-32 rounded-2xl"><i class="fa-solid fa-copy"></i>Copy</button>
+          <button class="call-button btn bg-green-600 w-32 rounded-2xl text-white"><i class="fa-solid fa-phone"></i>Call</button>
+        </div>
+      </div>
+      <!-- card 03-->
+      <div class="bg-white rounded-2xl p-4">
+        <div class="flex justify-between pt-2">
+        <div class="bg-red-200 rounded-sm  p-2 ">
+          <img class="h-6" src="./assets/emergency.png" alt="">
+        </div>
+        <i class="heart-icon fa-regular fa-heart text-2xl"></i>
+        </div>
+        <h3 class="font-bold text-xl">Fire</h3>
+                <p class="hotline-title text-xs">Fire service</p>
+
+        <h1 class="font-extrabold mt-2 text-2xl">999</h1>
+        <div class="bg-gray-300 rounded-2xl w-fit px-3 py-0.5">
+          <p class="text-xs">Fire Service Hotline</p>
+        </div>
+        <div class="flex items-center justify-center gap-2 mt-3">
+          <button class="copy-btn btn w-32 rounded-2xl"><i class="fa-solid fa-copy"></i>Copy</button>
+          <button class="call-button btn bg-green-600 w-32 rounded-2xl text-white"><i class="fa-solid fa-phone"></i>Call</button>
+        </div>
+      </div>
+      <!-- call history -->
+      <div id="history-card" class=" row-span-3 min-w-3 bg-white rounded-2xl p-5">
+        <div class="font-bold flex justify-between items-center mb-5">
+          <p><i class="fa-solid fa-clock-rotate-left"></i>  Call History</p>
+          <button class="clear-button btn bg-green-600 w-28 rounded-2xl text-white"></i>Clear</button>
+        </div>
+        <div class=" border-2 border-red-500 bg-gray-200 min-h-15 rounded-xl">
+
+        </div>
+      </div>
+      <!-- card 04-->
+      <div class="bg-white rounded-2xl p-4">
+        <div class="flex justify-between pt-2">
+        <div class="bg-red-200 rounded-sm  p-2 ">
+          <img class="h-6" src="./assets/emergency.png" alt="">
+        </div>
+        <i class="heart-icon fa-regular fa-heart text-2xl"></i>
+        </div>
+        <h3 class="font-bold text-xl">Fire</h3>
+                <p class="hotline-title text-xs">Fire service</p>
+
+        <h1 class="font-extrabold mt-2 text-2xl">999</h1>
+        <div class="bg-gray-300 rounded-2xl w-fit px-3 py-0.5">
+          <p class="text-xs">Fire Service Hotline</p>
+        </div>
+        <div class="flex items-center justify-center gap-2 mt-3">
+          <button class="copy-btn btn w-32 rounded-2xl"><i class="fa-solid fa-copy"></i>Copy</button>
+          <button class="call-button btn bg-green-600 w-32 rounded-2xl text-white"><i class="fa-solid fa-phone"></i>Call</button>
+        </div>
+      </div>
+      <!-- card 05-->
+      <div class="bg-white rounded-2xl p-4">
+        <div class="flex justify-between pt-2">
+        <div class="bg-red-200 rounded-sm  p-2 ">
+          <img class="h-6" src="./assets/emergency.png" alt="">
+        </div>
+        <i class="heart-icon fa-regular fa-heart text-2xl"></i>
+        </div>
+        <h3 class="font-bold text-xl">Fire</h3>
+                <p class="hotline-title text-xs">Fire service</p>
+
+        <h1 class="font-extrabold mt-2 text-2xl">999</h1>
+        <div class="bg-gray-300 rounded-2xl w-fit px-3 py-0.5">
+          <p class="text-xs">Fire Service Hotline</p>
+        </div>
+        <div class="flex items-center justify-center gap-2 mt-3">
+          <button class="copy-btn btn w-32 rounded-2xl"><i class="fa-solid fa-copy"></i>Copy</button>
+          <button class="call-button btn bg-green-600 w-32 rounded-2xl text-white"><i class="fa-solid fa-phone"></i>Call</button>
+        </div>
+      </div>
+      <!-- card 06-->
+      <div class="bg-white rounded-2xl p-4">
+        <div class="flex justify-between pt-2">
+        <div class="bg-red-200 rounded-sm  p-2 ">
+          <img class="h-6" src="./assets/emergency.png" alt="">
+        </div>
+        <i class="heart-icon fa-regular fa-heart text-2xl"></i>
+        </div>
+        <h3 class="font-bold text-xl">Fire</h3>
+                <p class="hotline-title text-xs">Fire service</p>
+
+        <h1 class="font-extrabold mt-2 text-2xl">999</h1>
+        <div class="bg-gray-300 rounded-2xl w-fit px-3 py-0.5">
+          <p class="text-xs">Fire Service Hotline</p>
+        </div>
+        <div class="flex items-center justify-center gap-2 mt-3">
+          <button class="copy-btn btn w-32 rounded-2xl"><i class="fa-solid fa-copy"></i>Copy</button>
+          <button class="call-button btn bg-green-600 w-32 rounded-2xl text-white"><i class="fa-solid fa-phone"></i>Call</button>
+        </div>
+      </div>
+      <!-- card 07-->
+      <div class="bg-white rounded-2xl p-4">
+        <div class="flex justify-between pt-2">
+        <div class="bg-red-200 rounded-sm  p-2 ">
+          <img class="h-6" src="./assets/emergency.png" alt="">
+        </div>
+        <i class="heart-icon fa-regular fa-heart text-2xl"></i>
+        </div>
+        <h3 class="font-bold text-xl">Fire</h3>
+                <p class="hotline-title text-xs">Fire service</p>
+
+        <h1 class="font-extrabold mt-2 text-2xl">999</h1>
+        <div class="bg-gray-300 rounded-2xl w-fit px-3 py-0.5">
+          <p class="text-xs">Fire Service Hotline</p>
+        </div>
+        <div class="flex items-center justify-center gap-2 mt-3">
+          <button class="copy-btn btn w-32 rounded-2xl"><i class="fa-solid fa-copy"></i>Copy</button>
+          <button class="call-button btn bg-green-600 w-32 rounded-2xl text-white"><i class="fa-solid fa-phone"></i>Call</button>
+        </div>
+      </div>
+      <!-- card 08-->
+      <div class="bg-white rounded-2xl p-4">
+        <div class="flex justify-between pt-2">
+        <div class="bg-red-200 rounded-sm  p-2 ">
+          <img class="h-6" src="./assets/emergency.png" alt="">
+        </div>
+        <i class="heart-icon fa-regular fa-heart text-2xl"></i>
+        </div>
+        <h3 class="font-bold text-xl">Fire</h3>
+                <p class="hotline-title text-xs">Fire service</p>
+
+        <h1 class="font-extrabold mt-2 text-2xl">999</h1>
+        <div class="bg-gray-300 rounded-2xl w-fit px-3 py-0.5">
+          <p class="text-xs">Fire Service Hotline</p>
+        </div>
+        <div class="flex items-center justify-center gap-2 mt-3">
+          <button class="copy-btn btn w-32 rounded-2xl"><i class="fa-solid fa-copy"></i>Copy</button>
+          <button class="call-button btn bg-green-600 w-32 rounded-2xl text-white"><i class="fa-solid fa-phone"></i>Call</button>
+        </div>
+      </div>
+      <!-- card 09-->
+      <div class="bg-white rounded-2xl p-4">
+        <div class="flex justify-between pt-2">
+        <div class="bg-red-200 rounded-sm  p-2 ">
+          <img class="h-6" src="./assets/emergency.png" alt="">
+        </div>
+        <i class="heart-icon fa-regular fa-heart text-2xl"></i>
+        </div>
+        <h3 class="font-bold text-xl">Fire</h3>
+                <p class="hotline-title text-xs">Fire service</p>
+
+        <h1 class="font-extrabold mt-2 text-2xl">999</h1>
+        <div class="bg-gray-300 rounded-2xl w-fit px-3 py-0.5">
+          <p class="text-xs">Fire Service Hotline</p>
+        </div>
+        <div class="flex items-center justify-center gap-2 mt-3">
+          <button class="copy-btn btn w-32 rounded-2xl"><i class="fa-solid fa-copy"></i>Copy</button>
+          <button class="call-button btn bg-green-600 w-32 rounded-2xl text-white"><i class="fa-solid fa-phone"></i>Call</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./JS/script.js"></script>
+  </body>
+</html>
