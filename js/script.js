@@ -19,6 +19,15 @@ document.body.addEventListener("click", function (event) {
     document.getElementById("heart-count").innerText = newHeartCount;
   }
 
+  // history
+  const historyCard = document.getElementById("history-card");
+  const callHistory = document.createElement("div");
+  callHistory.classList.add("bg-gray-200");
+  callHistory.classList.add("rounded-xl");
+  callHistory.classList.add("p-3");
+  callHistory.classList.add("mb-3");
+  const headline = document.createElement("p");
+
   // call button
   if (event.target.classList.contains("call-button")) {
     const parentContainer = event.target.parentElement.parentElement;
@@ -27,21 +36,11 @@ document.body.addEventListener("click", function (event) {
       parentContainer.querySelector(".hotline-title").innerText;
     const callNumber = parentContainer.querySelector("h1").innerText;
 
-    // history
-    const historyCard = document.getElementById("history-card");
-    const callHistory = document.createElement("div");
-    callHistory.classList.add("bg-gray-200");
-    callHistory.classList.add("rounded-xl");
-    callHistory.classList.add("p-3");
-    callHistory.classList.add("mb-3");
-      const headline = document.createElement("p");
-      
     const coins = parseInt(document.getElementById("coins").innerText);
     if (coins) {
       alert(`Call ${hotlineTitle} \n ${callNumber} `);
       const updatedCoin = coins - 20;
       document.getElementById("coins").innerText = updatedCoin;
-
 
       const now = new Date();
       const hours = now.getHours(); // 0-23
@@ -55,12 +54,19 @@ document.body.addEventListener("click", function (event) {
     } else if (coins < 20) {
       alert("You do not have enough coins to make a call.");
     }
-    // clear 
-      if (event.target.classList.contains('clear-button')) {
-        console.log("cl");
-        
-        headline.innerText = '';
-    }
-    }
+    // clear
+  }
+//   if (event.target.classList.contains("clear-button")) {
+//     console.log("cl");
+
+//       callHistory.style.display = 'none';
     
+//   }
 });
+
+document.getElementById('clear-button').addEventListener('click', function (event) {
+    const sibling = event.target.parentElement.nextElementSibling;
+    if (sibling) {
+      sibling.remove();
+    }
+})
